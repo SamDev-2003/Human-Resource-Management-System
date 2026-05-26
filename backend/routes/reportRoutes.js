@@ -1,0 +1,11 @@
+const router = require('express').Router();
+const c = require('../controllers/reportController');
+const { protect, authorize } = require('../middleware/authMiddleware');
+const HR = authorize('admin','hr_manager');
+router.get('/employees',          protect, HR, c.employeeReport);
+router.get('/attendance',         protect, HR, c.attendanceReport);
+router.get('/leave',              protect, HR, c.leaveReport);
+router.get('/payroll',            protect, HR, c.payrollReport);
+router.get('/download/employees', protect, HR, c.downloadEmployeePDF);
+router.get('/download/payroll',   protect, HR, c.downloadPayrollPDF);
+module.exports = router;
