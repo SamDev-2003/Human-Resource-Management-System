@@ -158,3 +158,5 @@ When you add a new employee, the system **automatically creates their login** an
 | Port 5173 in use | Vite will auto-pick next available port |
 | CORS error | Ensure CLIENT_URL=http://localhost:5173 in .env |
 | npm run install-all fails | Run `cd backend && npm install` then `cd ../frontend && npm install` separately |
+=======
+# Human-Resource-Management-System
